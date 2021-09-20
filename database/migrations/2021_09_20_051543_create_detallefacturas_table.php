@@ -15,6 +15,12 @@ class CreateDetallefacturasTable extends Migration
     {
         Schema::create('detallefacturas', function (Blueprint $table) {
             $table->id();
+            $table->integer('cantidad');
+            $table->integer('precio');
+
+            $table->foreign('productos_id')
+            ->references('id')->on('productos');
+
             $table->timestamps();
         });
     }

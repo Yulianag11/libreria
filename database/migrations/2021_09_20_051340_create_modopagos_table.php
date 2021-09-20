@@ -15,6 +15,7 @@ class CreateModopagosTable extends Migration
     {
         Schema::create('modopagos', function (Blueprint $table) {
             $table->id();
+            $table->string('');
             $table->timestamps();
         });
     }

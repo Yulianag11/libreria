@@ -15,6 +15,19 @@ class CreateComprasTable extends Migration
     {
         Schema::create('compras', function (Blueprint $table) {
             $table->id();
+            $table->int('cantidad');
+            $table->int('precio');
+            $table->int('nro factura');
+
+            $table->foreign('users_id')
+            ->references('id')->on('users');
+
+            $table->foreign('proveedors_id')
+            ->references('id')->on('proveedors');
+
+            $table->foreign('productos_id')
+            ->references('id')->on('productos');
+
             $table->timestamps();
         });
     }

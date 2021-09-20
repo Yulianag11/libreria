@@ -15,6 +15,20 @@ class CreatePedidolineasTable extends Migration
     {
         Schema::create('pedidolineas', function (Blueprint $table) {
             $table->id();
+            $table->date('f_pedido');
+
+            $table->foreign('users_id')
+            ->references('id')->on('users');
+
+            $table->foreign('productos_id')
+            ->references('id')->on('productos');
+
+            $table->foreign('modopagos_id')
+            ->references('id')->on('modopagos');
+
+            $table->foreign('detallefacturas_id')
+            ->references('id')->on('detallefacturas');
+
             $table->timestamps();
         });
     }
