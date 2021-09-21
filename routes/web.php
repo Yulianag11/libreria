@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\PedidolineaController;
+use App\Http\Controllers\OfertaController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,3 +24,7 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
+
+Route::resource('user', UserController::class);
+Route::resource('pedidolineas', PedidolineaController::class);
+Route::resource('ofertas', OfertaController::class);

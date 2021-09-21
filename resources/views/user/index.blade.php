@@ -13,7 +13,7 @@
             <div class="md:flex">
              <div class="p-8">
                 <div class="uppercase tracking-wide text-sm text-indigo-500 font-semibold">{{$user->name}}</div>
-                    <p class="mt-2 text-gray-500">una descripcion de ejemplo para rellenar con un poco de codigo hardcore, aguante informatica </p>
+                    <p class="mt-2 text-gray-500">una descripcion </p>
                     <a href="/user/{{$user->id}}" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Ver mas...</a>
                 </div>
             </div>
@@ -22,4 +22,5 @@
 </div>
 </div>
 @endsection
+
 
